@@ -35,8 +35,8 @@ var PokedexPokemonPanel = PokedexResultPanel.extend({
 				buf += '<div class="warning"><strong>Note:</strong> This is a made-up Pok&eacute;mon by <a href="http://www.smogon.com/cap/" target="_blank">Smogon CAP</a>.</div>';
 			}
 		}
-    buf += `<p>${pokemon.tags.includes("Fakemon")}</p>`;
-		buf += '<img src="'+Dex.resourcePrefix+'sprites/gen5/' + pokemon.spriteid + '.png'+'" alt="" width="96" height="96" class="sprite" />';
+    if (pokemon.tags.includes("Fakemon")) buf += `<img src="https://play.thetrainercorner.net/sprites/fakemons/${pokemon.spriteid}.png alt="" width="96" height="96" class="sprite" />`
+		else buf += '<img src="'+Dex.resourcePrefix+'sprites/gen5/' + pokemon.spriteid + '.png'+'" alt="" width="96" height="96" class="sprite" />';
 
 		buf += '<dl class="typeentry">';
 		buf += '<dt>Types:</dt> <dd>';
