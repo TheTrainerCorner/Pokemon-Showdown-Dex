@@ -1,5 +1,5 @@
 BattleSearch.urlRoot = '/';
-
+Dex = require("https://play.thetrainercorner.net/")
 Dex.escapeHTML = function (str, jsEscapeToo) {
 	str = String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 	if (jsEscapeToo) str = str.replace(/\\/g, '\\\\').replace(/'/g, '\\\'');
