@@ -35,6 +35,7 @@ var PokedexPokemonPanel = PokedexResultPanel.extend({
 				buf += '<div class="warning"><strong>Note:</strong> This is a made-up Pok&eacute;mon by <a href="http://www.smogon.com/cap/" target="_blank">Smogon CAP</a>.</div>';
 			}
 		}
+    buf += `<p>${pokemon}</p>`;
 		buf += '<img src="'+Dex.resourcePrefix+'sprites/gen5/' + pokemon.spriteid + '.png'+'" alt="" width="96" height="96" class="sprite" />';
 
 		buf += '<dl class="typeentry">';
@@ -58,7 +59,6 @@ var PokedexPokemonPanel = PokedexResultPanel.extend({
 		buf += ''+pokemon.heightm+' m, '+pokemon.weightkg+' kg<br /><small><a class="subtle" href="/moves/grassknot" data-target="push">Grass Knot</a>: '+gkPower+'</small>';
 		buf += '</dd>';
 		buf += '</dl>';
-
 		buf += '<dl class="abilityentry">';
 		buf += '<dt>Abilities:</dt> <dd class="imgentry">';
 		for (var i in pokemon.abilities) {
